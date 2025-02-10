@@ -9,8 +9,6 @@ jQuery(document).ready(function($) {
     /* 
     2. Show Toast Notification
        Displays a temporary notification message with icon and progress bar
-       @param {string} message - Text to display
-       @param {string} [type=success] - Notification type (success/error)
     */
     function showToast(message, type = 'success') {
         const container = document.getElementById('resend-toast-container');
