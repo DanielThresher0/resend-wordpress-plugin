@@ -12,7 +12,8 @@ if (!defined('ABSPATH')) exit;
 define('RESEND_EMAIL_SETTINGS_PATH', plugin_dir_path(__FILE__));
 define('RESEND_EMAIL_SETTINGS_URL', plugin_dir_url(__FILE__));
 
-/* 1. Document Ready Handler Equivalent */
+/* 1. Plugin sidebar, scripts and styles set up */
+
 function resend_email_settings_add_admin_menu() {
     add_menu_page(
         __('Resend Email Settings', 'resend-email-settings'),
@@ -26,7 +27,6 @@ function resend_email_settings_add_admin_menu() {
 }
 add_action('admin_menu', 'resend_email_settings_add_admin_menu');
 
-/* 1. Document Ready Handler Equivalent */
 function resend_email_settings_enqueue_admin_assets($hook) {
     if ($hook !== 'toplevel_page_resend-email-settings') return;
     
